@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="{% static 'ebac/post.css' %}">
+</head>
+<body>
+    
+    <!--Barra de Navegação-->
+    <nav>
+        <h2><a href="#">Pagina inicial</a></h2>
+        <div class="divBusca">
+            <input type="text" id="txtBusca" placeholder="Buscar..."/>
+            <button id="btnBusca">Buscar</button>
+          </div>
+        <ul>
+            <li><strong><a href='#'>Home</a></li></strong>
+            <li><strong><a href='#'>Politica</a></li></strong>
+            <li><strong><a href='#'>Contato</a></li></strong>
+        </ul>
+    </nav>
+
+    <!--Post-->
+        <div class="container">
+            <h1>{{post.titulo}}</h1>
+            <p>{{post.autor}} | {{post.criado_em}}</p><h3>{{post.slug}}</h3>
+        </div>
+
+    <!--Sobre-->
+    <div class="Sobre">
+        <h1 class="card-header">Sobre</h1>
+        <div class="card-body">
+            <p>Sou um blog super interessante, busco te fornecer a informação que procura,
+            ainda estou em desenvolvimento então peço que tenha paciencia comigo.</p>
+            <a href="#"><button>Saiba mais!</button></a>
+        </div>
+    </div>
+
+    <!--Comentarios-->
+    <div class="Comentarios_quantidade">
+        {% with comentarios.count as total_comentarios %}
+            <h1>{{ total_comentarios }} comentarios</h1>
+        {% endwith %} 
+        {% for comentario in comentarios %}
+            <strong><p>{{comentario.nome}}</strong> - {{comentario.criado_em}}</p>
+            <p>{{comentario.conteudo}}</p>
+        {% endfor %}
+    </div>
+
+    <br>
+    <!--Comentar-->
+    <div class="Comentar">
+    <h1>Comentar</h1>
+        <form method="post" style="margin-top: 1.3em;">
+            {{ comentario_form.as_p }}
+            {% csrf_token %}
+            <button type="submit" class="btn btn-primary  btn-lg">Submit</button>
+        </form>
+    </div>
+
+    <!--Rodape-->
+    <footer class="Rodape">
+        &copy; Todos os direitos reservados a Fabio Kauan 
+    </footer>
+
+</body>
