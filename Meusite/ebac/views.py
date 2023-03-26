@@ -1,21 +1,17 @@
-from django.shortcuts import render, get_object_or_404
-from .models import Post, Comentario
+from django.shortcuts import render, HttpResponseRedirect
+from .models import Post
 from .forms import ComentarioForm
 
 # Create your views here.
 
 def home(request):
     post = Post.objects.filter()
-    return render(request, 'home.html', {'post': post})
-
-#def post(request, post_id):
-    post = Post.objects.filter(id=post_id)
     
     conteudo = {
-        'post': post,
+        'post': post
     }
     
-    return render(request, 'post.html', conteudo)
+    return render(request, 'home.html', conteudo )
 
 def post(request, id):
     template_nome = 'post.html'
@@ -28,7 +24,8 @@ def post(request, id):
         if comentario_form.is_valid():
             novo_comentario = comentario_form.save(commit=False)
             novo_comentario.post = post
-            novo_comentario.save()            
+            novo_comentario.save()
+            return HttpResponseRedirect(request.path_info)            
     else:
         comentario_form = ComentarioForm()
         
