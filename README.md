@@ -1,5 +1,5 @@
 # Blog
 Blog pessoal
 
-![Opera Instantâneo_2023-03-26_184904_127 0 0 1](https://user-images.githubusercontent.com/125137802/227806780-626b75d0-d294-49fe-aadb-978890bc7a63.png)
+![Screenshot_2](https://user-images.githubusercontent.com/125137802/227808046-8b3e868c-33ed-4413-9032-06945bf0ce85.png)
 
