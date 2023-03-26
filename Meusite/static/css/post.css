@@ -5,132 +5,45 @@ body {
     margin: 0;
 }
 
-/* Barra de Navegação */
-nav {
-    height: 60px;
-    display: flex;
-    justify-content: space-around;
-    background-color: #ff8800;
-    align-items: center;
-}
-
-nav ul {
-    display: flex; 
-    list-style: none;
-}
-
-nav ul li a{
-    margin-right: 10px;
-    text-decoration: none;
-    color: white;
-}
-
-nav h2 a {
-    text-decoration: none;
-    color: white;
-}
-
-.divBusca{
-    background-color:#E0EEEE;
-    border:solid 2px #5F9EA0;
-    border-radius:10px;
-    width:300px;
-    height:32px;
-  }
-  
-  #txtBusca{
-    float:left;
-    background-color:transparent;
-    padding-left:5px;
-    font-size:18px;
-    border:none;
-    height:32px;
-    width:191px;
-  }
-  
-  #btnBusca{
-    border:none;
-    float:left;
-    height:32px;
-    border-radius:0 7px 7px 0;
-    width:102px;
-    font-weight:bold;
-    background:#5F9EA0;
-  }
-
 /* Post */
-.container {
-    width: 1300px;
+.Container {
+    width: 1100px;
     margin-top: 50px;
     margin-left: 120px;
     padding: 20px;
-    box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 0px 5px 2px rgba(2, 2, 0, 0.2);
     background-color: white;
+    float: left;
 }
 
 /* Comentarios */
-
 .Comentarios_quantidade {
-    margin-top: 50px;
     margin-left: 120px;
     padding: 20px;
-    width: 1300px;
-    border: solid 1px white;
-    background-color: white;
+    width: 1100px;
+    background-color: rgb(235, 214, 214);
+    box-shadow: 5px 0px 5px 2px rgba(0, 0, 0, 0.2);
 }
 
 .Comentar {
     margin-left: 120px;
-    width: 1300px;
+    width: 1100px;
     padding: 20px;
-    border: solid 1px white;
     background-color: white;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Sobre */
 .Sobre {
-    margin-top:  -220px;
-    margin-left: 1550px;
+    display: flex; 
+    margin-top: 50px;
+    margin-left: 1300px;
     width: 500px;
 }
 
-.card-header {  
-    background-color: rgb(165, 162, 170);
+.card-header { 
+    color: white; 
+    background-color: #ff8800;
     padding: 5px;
     text-align: center;
     box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.2);
@@ -139,9 +52,8 @@ nav h2 a {
 .card-body {
     text-align: left;
     padding: 5px;
-    margin-top: -21px;
     background-color: white;
-    border: solid 1px white;
+
     box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.2);
 }
 
@@ -177,9 +89,6 @@ nav h2 a {
 .Sobre a {
     text-decoration: none;
 }
-
-
-
 
 /* Rodapé */
 .Rodape {
