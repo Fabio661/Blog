@@ -25,7 +25,7 @@ def post(request, id):
             novo_comentario = comentario_form.save(commit=False)
             novo_comentario.post = post
             novo_comentario.save()
-            return HttpResponseRedirect(request.path_info)            
+            return HttpResponseRedirect(request.path_info)
     else:
         comentario_form = ComentarioForm()
         
